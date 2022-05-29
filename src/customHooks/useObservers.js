@@ -28,9 +28,11 @@ const useObservers = (
         userObserver.current = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting && users.length > usersToDisplay.length && loadingUsersToDisplay === false) {
                 setLoadingUsersToDisplay(true);
+                setTimeout(() => {
                     setUsersToDisplay(prev => [...prev, ...users.slice(userOffset, userOffset + 10)])
                     setUserOffset(prev => userOffset + 10)
                     setLoadingUsersToDisplay(false);
+                }, 1000);
             }
         })
         if (el) {
@@ -50,15 +52,19 @@ const useObservers = (
             if (entries[0].isIntersecting && moreFilteredUsers && filteredUsers.length > filteredUsersToDisplay.length) {
                 if (filteredUsers.length - filteredUsersToDisplay.length >= 10 && loadingUsersToDisplay === false) {
                     setLoadingUsersToDisplay(true);
-                    setFilteredUsersToDisplay(prev => [...prev, ...filteredUsers.slice(filteredUsersOffset, filteredUsersOffset + 10)])
-                    setFilteredUsersOffset(prev => filteredUsersOffset + 10)
-                    setLoadingUsersToDisplay(false);
+                    setTimeout(() => {
+                        setFilteredUsersToDisplay(prev => [...prev, ...filteredUsers.slice(filteredUsersOffset, filteredUsersOffset + 10)])
+                        setFilteredUsersOffset(prev => filteredUsersOffset + 10)
+                        setLoadingUsersToDisplay(false);
+                    }, 1000);
                 } else if (loadingUsersToDisplay === false) {
                     setLoadingUsersToDisplay(true);
                     setMoreFilteredUsers(false);
-                    setFilteredUsersToDisplay(prev => [...prev, ...filteredUsers.slice(filteredUsersOffset, filteredUsers.length)])
-                    setFilteredUsersOffset(prev => filteredUsers.length)
-                    setLoadingUsersToDisplay(false);   
+                    setTimeout(() => {
+                        setFilteredUsersToDisplay(prev => [...prev, ...filteredUsers.slice(filteredUsersOffset, filteredUsers.length)])
+                        setFilteredUsersOffset(prev => filteredUsers.length)
+                        setLoadingUsersToDisplay(false);   
+                    }, 1000);
                 }
             }
         })

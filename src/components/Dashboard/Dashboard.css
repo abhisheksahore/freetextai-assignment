@@ -68,7 +68,7 @@ th {
 
 .btn {
     padding: 1rem 2rem;
-    background-color: #F14954;
+    background-color: blueviolet;
     color: white;
     font-weight: 800;
     letter-spacing: 1px;
@@ -78,7 +78,7 @@ th {
 
 .btn:hover,
 .btn:focus {
-    background-color: #ca303a;
+    background-color: rgb(98, 25, 167);
 }
 
 

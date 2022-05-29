@@ -1,0 +1,142 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+
+.header-container {
+    display: flex;
+    padding: 2rem 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message {
+    color: grey;
+    margin-top: 2rem;
+}
+
+.search_bar {
+    width: 300px;
+    min-width: 200px;
+    padding: .75rem;
+    border-radius: .5rem;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: 2px solid grey;
+    outline: none;
+}
+
+/* table */
+
+.table-wrapper {
+    padding: 2rem 0rem 2rem 2rem;
+    width: 100%;
+    background-color: rgb(253, 253, 253);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 5px rgb(234, 234, 234);
+}
+
+.table {
+    width: 100%;
+    background-color: rgb(251, 251, 251);
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 1rem;
+    font-weight: 500;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+}
+
+.background-color-grayish {
+    background-color: rgb(220, 220, 220);
+
+}
+
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: #F14954;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: rgb(109, 16, 195);
+}
+
+
+.profile-picture {
+    border-radius: 100px;
+    width: 80px;
+    height: 80px;
+}
+
+.action-btns {
+    gap: 1rem;
+  }
+
+
+@media (min-width: 300px) and (max-width: 650px) {
+
+    .container {
+        padding: .75rem;
+    }
+
+    .table-wrapper {
+        padding: 2rem 0rem 2rem .25rem;
+        /* background: transparent;
+        box-shadow: none; */
+    }
+
+    td {
+        padding: .25rem;
+        font-weight: 400;
+        font-size: .9rem;
+    }
+
+    th {
+        padding: .25rem;
+        font-size: .9rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-picture {
+        width: 40px;
+        height: 40px;
+    }
+
+    .action-btns {
+        gap: .25rem;
+    }
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.try-again-btn {
+    margin-top: 2rem;
+}

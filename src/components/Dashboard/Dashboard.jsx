@@ -143,8 +143,8 @@ const Dashboard = () => {
                 <div >
                     <input type="text" className='search_bar' value={filterParam} onChange={e => setFilterParam(e.target.value)} placeholder='Search by name or title' />
                 </div>
-                <div className='btn btn-danger'>
-                    <div onClick={deleteSelectedUser}>Delete Selected</div>
+                <div className='btn btn-danger' onClick={deleteSelectedUser}>
+                    <div>Delete Selected</div>
                 </div>
             </div>
             <div className='table-wrapper'>
